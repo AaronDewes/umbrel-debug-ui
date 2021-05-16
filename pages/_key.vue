@@ -23,20 +23,13 @@
       </p>
     </div>
     <div v-else class="h-100">
+      <!-- eslint-disable vue/no-v-html -->
+      <!-- No XSS, ansi_up sanitizes this before -->
       <div
-        class="
-          p-4
-          d-flex
-          justify-content-between
-          w-100
-          mw-100
-          overflow-scroll
-          no-scrollbar
-        "
-        style="overflow: scroll"
-      >
-        {{ logs[displayedLogs] || 'An error occurred.' }}
-      </div>
+        v-if="logs[displayedLogs]"
+        class="p-4 d-flex justify-content-between w-100 mw-100"
+        v-html="logs[displayedLogs]"
+      ></div>
       <div
         class="
           p-2

@@ -33,18 +33,10 @@ body,
   width: 100vw;
   background-color: #141821 !important;
   color: white;
+  white-space: break-spaces;
+}
+
+button {
   white-space: nowrap;
-}
-
-.h-95 {
-  height: 95%;
-}
-
-.no-scrollbar {
-  scrollbar-width: none;
-}
-
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
 }
 </style>
