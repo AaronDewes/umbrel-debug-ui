@@ -27,9 +27,10 @@
       <!-- No XSS, ansi_up sanitizes this before -->
       <div
         v-if="logs[displayedLogs]"
-        class="p-4 d-flex justify-content-between w-100 mw-100"
+        class="p-4 w-100 mw-100"
         v-html="logs[displayedLogs]"
       ></div>
+      <div v-else class="p-4 w-100 mw-100">Logs not found!</div>
       <div
         class="
           p-2
