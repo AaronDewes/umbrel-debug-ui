@@ -41,6 +41,7 @@
           align-items-center
           justify-content-center
           no-scrollbar
+          bg-dark
         "
       >
         <b-button
