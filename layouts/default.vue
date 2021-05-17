@@ -33,10 +33,6 @@ body,
   width: 100vw;
   background-color: #141821 !important;
   color: white;
-  white-space: break-spaces;
-}
-
-button {
   white-space: nowrap;
 }
 </style>

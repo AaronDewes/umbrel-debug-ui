@@ -25,11 +25,13 @@
     <div v-else class="h-100">
       <!-- eslint-disable vue/no-v-html -->
       <!-- No XSS, ansi_up sanitizes this before -->
-      <div
-        v-if="logs[displayedLogs]"
-        class="p-4 w-100 mw-100"
-        v-html="logs[displayedLogs]"
-      ></div>
+      <div v-if="logs[displayedLogs]" class="p-4 w-100 mw-100">
+        <code
+          v-for="line in logs[displayedLogs]"
+          :key="line"
+          v-html="line"
+        ></code>
+      </div>
       <div v-else class="p-4 w-100 mw-100">Logs not found!</div>
       <div
         class="
@@ -117,7 +119,7 @@ export default {
     const ansiUp = new AnsiUp()
 
     for (const element in this.logs) {
-      this.logs[element] = ansiUp.ansi_to_html(this.logs[element])
+      this.logs[element] = ansiUp.ansi_to_html(this.logs[element]).split('\n')
     }
   },
   watch: {
