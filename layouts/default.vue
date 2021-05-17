@@ -1,5 +1,10 @@
 <template>
   <div>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap"
+      rel="stylesheet"
+    />
     <Nuxt />
   </div>
 </template>
@@ -39,5 +44,12 @@ body,
 code {
   color: white;
   display: block;
+  font-family: Fira Code, Consolas, Courier New, monospace;
+}
+
+.viewer {
+  line-height: 1.5rem;
+  white-space: pre-wrap;
+  font-size: 0.9em;
 }
 </style>

@@ -25,7 +25,7 @@
     <div v-else class="h-100">
       <!-- eslint-disable vue/no-v-html -->
       <!-- No XSS, ansi_up sanitizes this before -->
-      <div v-if="logs[displayedLogs]" class="p-4 w-100 mw-100">
+      <div v-if="logs[displayedLogs]" class="p-4 w-100 mw-100 codeviewer">
         <code
           v-for="line in logs[displayedLogs]"
           :key="line"
