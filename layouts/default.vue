@@ -47,9 +47,10 @@ code {
   font-family: Fira Code, Consolas, Courier New, monospace;
 }
 
-.viewer {
+.codeviewer {
   line-height: 1.5rem;
   white-space: pre-wrap;
   font-size: 0.9em;
+  padding-bottom: 5rem !important;
 }
 </style>
