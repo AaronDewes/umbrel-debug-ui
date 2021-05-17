@@ -35,4 +35,9 @@ body,
   color: white;
   white-space: nowrap;
 }
+
+code {
+  color: white;
+  display: block;
+}
 </style>
