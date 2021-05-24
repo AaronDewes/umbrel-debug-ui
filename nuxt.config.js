@@ -29,16 +29,6 @@ export default {
     // https://go.nuxtjs.dev/typescript
     '@nuxt/typescript-build',
   ],
-
-  // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [
-    // https://go.nuxtjs.dev/bootstrap
-    'bootstrap-vue/nuxt',
-  ],
-
-  bootstrapVue: {
-    icons: true,
-  },
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
-}
+};

@@ -11,15 +11,16 @@
   >
     <img alt="Umbrel" src="@/assets/logo.svg" class="mb-5 logo" />
     <span class="text-muted w-75 text-center">
-      <small> We host debug logs of users on this server.</small>
+      <small>We host debug logs of users on this server.</small>
     </span>
   </div>
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import Vue from 'vue';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-export default Vue.extend({})
+export default Vue.extend({});
 </script>
 
 <style>
