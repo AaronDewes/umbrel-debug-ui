@@ -42,7 +42,7 @@ body,
 }
 
 code {
-  color: white;
+  color: white !important;
   display: block;
   font-family: Fira Code, Consolas, Courier New, monospace;
 }

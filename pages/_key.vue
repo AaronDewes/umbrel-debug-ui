@@ -48,8 +48,7 @@
       >
         <button
           v-if="displayedLogs !== 'main'"
-          class="m-2"
-          size="sm"
+          class="m-2 btn btn-primary"
           variant="outline-success"
           @click="displayedLogs = 'main'"
         >
@@ -72,8 +71,7 @@
         </button>
         <button
           v-if="displayedLogs !== 'apps'"
-          class="m-2"
-          size="sm"
+          class="m-2 btn btn-primary"
           variant="outline-success"
           @click="displayedLogs = 'apps'"
         >
@@ -98,8 +96,8 @@
         </button>
         <button
           v-if="displayedLogs !== 'dmesg'"
-          size="sm"
           variant="outline-success"
+          class="m-2 btn btn-primary"
           @click="displayedLogs = 'dmesg'"
         >
           <svg
@@ -130,29 +128,29 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
+import Vue from 'vue'
 // import { BIconUmbrella, BIconApp, BIconFileCode } from 'bootstrap-icons-vue'
-import AnsiUp from 'ansi_up';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import AnsiUp from 'ansi_up'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 type Logs = {
-  main?: string;
-  dmesg?: string;
-  apps?: string;
-};
+  main?: string
+  dmesg?: string
+  apps?: string
+}
 
 type SplitLogs = {
-  main?: string[];
-  dmesg?: string[];
-  apps?: string[];
-};
+  main?: string[]
+  dmesg?: string[]
+  apps?: string[]
+}
 
 type LogsData = {
-  logs: Logs;
-  splitLogs: SplitLogs;
-  displayedLogs: keyof Logs;
-  noLogs: boolean;
-};
+  logs: Logs
+  splitLogs: SplitLogs
+  displayedLogs: keyof Logs
+  noLogs: boolean
+}
 
 export default Vue.extend({
   /* components: {
@@ -166,7 +164,7 @@ export default Vue.extend({
       displayedLogs: 'main',
       noLogs: false,
       splitLogs: {},
-    };
+    }
   },
   async fetch() {
     this.logs = await fetch(`https://api.debug.umbrel.tech/api/read`, {
@@ -177,21 +175,21 @@ export default Vue.extend({
       headers: {
         'Content-Type': 'application/json',
       },
-    }).then((res) => res.json());
+    }).then((res) => res.json())
     if (!this.logs) {
-      this.noLogs = true;
+      this.noLogs = true
     }
-    const ansiUp = new AnsiUp();
+    const ansiUp = new AnsiUp()
 
-    let element: keyof Logs;
+    let element: keyof Logs
     for (element in this.logs) {
       this.splitLogs[element] = ansiUp
         .ansi_to_html(this.logs[element] || 'Not found')
-        .split('\n');
+        .split('\n')
     }
   },
   watch: {
     '$route.query': '$fetch',
   },
-});
+})
 </script>
