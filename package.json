@@ -10,7 +10,7 @@
     "lint": "yarn lint:js"
   },
   "dependencies": {
-    "@nuxtjs/vercel-builder": "^0.21.2",
+    "@nuxtjs/vercel-builder": "^0.24.0",
     "ansi_up": "^5.0.1",
     "bootstrap": "^5.1.0",
     "bootstrap-icons-vue": "^0.7.0",
